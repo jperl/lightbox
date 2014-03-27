@@ -37,7 +37,7 @@ Famous.loaded(function (require) {
     var KeyCodes = require('famous-utils/KeyCodes');
     var SceneController = require('app/SceneController');
 
-    var LightboxScene = require('app/scenes/LightboxScene');
+    var LightboxScene = Lightbox.LightboxScene;
     var BlankLightbox = Lightbox.BlankLightbox;
 
     var mainCtx = Engine.createContext();

@@ -1,13 +1,13 @@
-Famous.loaded(function (t) {
+Famous.loaded(function (require) {
     function s() {
         o.apply(this), this.lightbox = new u({commonFrontProperties: {backgroundColor: "white",boxShadow: "0px 1px 1px 1px #333",borderRadius: "5px",lineHeight: "400px",backgroundColor: "#ccc",textAlign: "center"},commonBackProperties: {backgroundColor: "#33ccff"},columnWidth: 400,rowHeight: 400}), this.initUI(), this.parentUI = new p, this.parentUI.setCurrentObject(this), n.pipe(this.parentUI), this.node.add(this.parentUI), this.node.add(this.lightbox), this.events(), this.setData()
     }
-    var o = t("famous-scene/Scene");
-    t("famous/Surface"), t("famous/Matrix");
-    var n = t("famous/Engine");
-    t("famous/Utility");
-    var r = t("famous-utils/Utils"), a = t("app/widgets/FrontTile"), h = t("app/widgets/BackTile"), u = t("app/widgets/Lightbox"), p = t("core/Interface");
-    t("app/data"), s.prototype = Object.create(o.prototype), s.prototype.constructor = s, s.DEFAULT_OPTIONS = {}, s.prototype.events = function() {
+    var o = require("famous-scene/Scene");
+    require("famous/Surface"), require("famous/Matrix");
+    var n = require("famous/Engine");
+    require("famous/Utility");
+    var r = require("famous-utils/Utils"), a = require("app/widgets/FrontTile"), h = Lightbox.BackTile, u = require("app/widgets/Lightbox"), p = require("core/Interface");
+    require("app/data"), s.prototype = Object.create(o.prototype), s.prototype.constructor = s, s.DEFAULT_OPTIONS = {}, s.prototype.events = function() {
         this.parentUI.on("showUI", function() {
             this.showUI()
         }.bind(this)), this.parentUI.on("hideUI", this.hideUI.bind(this)), this.lightbox.on("selectionView", this.parentUI.hideAllUI.bind(this.parentUI)), this.lightbox.on("gridView", this.parentUI.showAllUI.bind(this.parentUI))
